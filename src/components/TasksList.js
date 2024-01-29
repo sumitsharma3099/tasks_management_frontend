@@ -139,8 +139,8 @@ const TasksList = () => {
                                             text-emerald-500 hover:cursor-pointer hover:text-black" onClick={() => setSortByAndDirection('title', sortDirection)} title='Click to Sort by Title'>
                                                 <div className='flex items-center justify-center'>
                                                 Title
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
                                                 </svg>
                                                 </div>
                                                
@@ -148,8 +148,8 @@ const TasksList = () => {
                                             <th className="col px-6 py-4 text-center text-emerald-500 hover:cursor-pointer hover:text-black" onClick={() => setSortByAndDirection('description', sortDirection)} title='Click to Sort by Description'>
                                             <div className='flex items-center justify-center'>
                                                 Description
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
                                                 </svg>
                                                 </div>
                                             </th>
@@ -161,8 +161,8 @@ const TasksList = () => {
                                         {records.length > 0 ? (records.map((record) => (
                                             <tr className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 text-center"
                                                 key={record.id}>
-                                                <td className="whitespace-nowrap px-6 py-4 font-medium">{record.title}</td>
-                                                <td className="whitespace-nowrap px-6 py-4">{record.description}</td>
+                                                <td className="whitespace-nowrap px-6 py-4 font-medium">{record.sort_title}</td>
+                                                <td className="whitespace-nowrap px-6 py-4">{record.sort_description}</td>
                                                 <td className="whitespace-nowrap px-6 py-4 font-medium">{record.status}</td>
                                                 <td className="whitespace-nowrap px-6 py-4">
                                                     <button type="button" onClick={() => openTaskDetailView(record.id)} className="text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">
