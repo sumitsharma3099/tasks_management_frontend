@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { delete_task_url, tasks_list_url } from '../constants/TokenAndRoutes';
 import swal from 'sweetalert';
+import debounce from 'lodash/debounce';
 
 const TasksList = () => {
     let token = localStorage.getItem("token");
@@ -80,6 +81,11 @@ const TasksList = () => {
         }
     }
 
+    const handleSearchInputChange = debounce((e) => {;
+        setSearchText(e.target.value);
+        filterTasks(selectedOption, e.target.value, sortBy, sortDirection)
+      }, 500)
+
     useEffect(() => {
         filterTasks('All', searchText, sortBy, sortDirection);
     }, [])
@@ -103,7 +109,7 @@ const TasksList = () => {
                             type="text"
                             className="border border-gray-300 p-2 rounded-l-md mr-2 focus:outline-none focus:border-blue-500"
                             placeholder="Enter text"
-                            onChange={(e) => setSearchText(e.target.value)}
+                            onChange={(e) => handleSearchInputChange(e)}
                         />
 
 
