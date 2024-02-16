@@ -81,10 +81,11 @@ const TasksList = () => {
         }
     }
 
-    const handleSearchInputChange = debounce((e) => {;
+    const handleSearchInputChange = debounce((e) => {
+        ;
         setSearchText(e.target.value);
         filterTasks(selectedOption, e.target.value, sortBy, sortDirection)
-      }, 500)
+    }, 500)
 
     useEffect(() => {
         filterTasks('All', searchText, sortBy, sortDirection);
@@ -101,27 +102,14 @@ const TasksList = () => {
                     <button type="button" onClick={() => navigate("/new_task")} className="text-lime-700 hover:text-white border border-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-lime-400 dark:text-lime-400 dark:hover:text-white dark:hover:bg-lime-500 dark:focus:ring-lime-900">
                         New Task
                     </button>
-
-
-                    <div className="flex items-center">
-
+                    <div>
+                        <b className='px-5'>Search:</b>
                         <input
-                            type="text"
-                            className="border border-gray-300 p-2 rounded-l-md mr-2 focus:outline-none focus:border-blue-500"
-                            placeholder="Enter text"
-                            onChange={(e) => handleSearchInputChange(e)}
-                        />
-
-
-                        <button
-                            className="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue"
-                            onClick={() => filterTasks(selectedOption, searchText, sortBy, sortDirection)}
-                        >
-                            Search
-                        </button>
+                            type="search"
+                            className="border border-gray-300 p-2 rounded mr-2 focus:outline-none focus:border-blue-500"
+                            placeholder="Title & Description"
+                            onChange={(e) => handleSearchInputChange(e)} />
                     </div>
-
-
                     <div>
                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Filter :</label>
                         <select value={selectedOption} onChange={handleSelectChange} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
@@ -132,8 +120,6 @@ const TasksList = () => {
                         </select>
                     </div>
                 </div>
-
-
                 <div className="flex flex-col">
                     <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
@@ -144,19 +130,18 @@ const TasksList = () => {
                                             <th className="col px-6 py-4 text-center 
                                             text-emerald-500 hover:cursor-pointer hover:text-black" onClick={() => setSortByAndDirection('title', sortDirection)} title='Click to Sort by Title'>
                                                 <div className='flex items-center justify-center'>
-                                                Title
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
-                                                </svg>
+                                                    Title
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                                                    </svg>
                                                 </div>
-                                               
                                             </th>
                                             <th className="col px-6 py-4 text-center text-emerald-500 hover:cursor-pointer hover:text-black" onClick={() => setSortByAndDirection('description', sortDirection)} title='Click to Sort by Description'>
-                                            <div className='flex items-center justify-center'>
-                                                Description
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
-                                                </svg>
+                                                <div className='flex items-center justify-center'>
+                                                    Description
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                                                    </svg>
                                                 </div>
                                             </th>
                                             <th className="col px-6 py-4 text-center">Status</th>
@@ -185,7 +170,6 @@ const TasksList = () => {
                                         ))) : <tr>
                                             <td colSpan={4}><p className='text-center font-meduim text-xl'>No Records Found.</p></td>
                                         </tr>}
-
                                     </tbody>
                                 </table>
                             </div>
