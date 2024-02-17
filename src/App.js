@@ -17,12 +17,12 @@ function App() {
      <BrowserRouter>
         <Routes>
             <Route exact path="/" element={<LoginPage/>} />
-            <Route path="/signup" element={<SignupPage/>} />
-            <Route path="/tasks_list" element={<TasksListPage/>} />
-            <Route path="/task_detail_view" element={<TaskDetailViewPage/>} />
-            <Route path="/edit_task" element={<EditTaskPage/>} />
-            <Route path="/new_task" element={<NewTaskPage/>} />
-            <Route path="*" element={<PageNotFound/>} />
+            <Route exact path="/signup" element={<SignupPage/>} />
+            <Route exact path="/tasks_list" element={<TasksListPage/>} />
+            <Route exact path="/task_detail_view" element={<TaskDetailViewPage/>} />
+            <Route exact path="/edit_task" element={<EditTaskPage/>} />
+            <Route exact path="/new_task" element={<NewTaskPage/>} />
+            <Route exact path="*" element={<PageNotFound/>} />
         </Routes>
       </BrowserRouter>
   );
