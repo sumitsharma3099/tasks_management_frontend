@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -14,7 +14,7 @@ import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
-     <BrowserRouter>
+     <HashRouter>
         <Routes>
             <Route exact path="/" element={<LoginPage/>} />
             <Route exact path="/signup" element={<SignupPage/>} />
@@ -24,7 +24,7 @@ function App() {
             <Route exact path="/new_task" element={<NewTaskPage/>} />
             <Route exact path="*" element={<PageNotFound/>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
   );
 }
 
