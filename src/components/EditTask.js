@@ -87,11 +87,11 @@ export default function EditTask() {
   }
 
   return (
-    <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-      <div className='flex flex-col items-center p-6'>
+    <form onSubmit={handleSubmit}>
+      <div className='flex flex-col items-center'>
         <h2 className="text-2xl font-extrabold text-emerald-500">Edit Task</h2>
       </div>
-      <div className="">
+      <div>
         {
           fields.map(field =>
             <Input
@@ -109,7 +109,7 @@ export default function EditTask() {
           )
         }
         <FormAction handleSubmit={handleSubmit} text="Update Task" />
-        <div className='flex flex-col items-center p-6'>
+        <div className='flex flex-col items-center p-2'>
           <BackToTasksList />
         </div>
       </div>

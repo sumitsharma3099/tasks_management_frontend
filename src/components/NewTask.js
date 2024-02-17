@@ -84,9 +84,9 @@ export default function NewTask() {
   }
 
   return (
-    <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-      <div className='flex flex-col items-center p-6'>
-        <h2 className="text-2xl font-extrabold text-emerald-500">New Task</h2>
+    <form onSubmit={handleSubmit}>
+      <div className='flex flex-col items-center'>
+        <h2 className="text-2xl font-extrabold text-emerald-500">Create New Task</h2>
       </div>
       <div className="">
         {
@@ -106,7 +106,7 @@ export default function NewTask() {
           )
         }
         <FormAction handleSubmit={handleSubmit} text="Create Task" />
-        <div className='flex flex-col items-center p-6'>
+        <div className='flex flex-col items-center p-2'>
           <BackToTasksList />
         </div>
       </div>

@@ -13,9 +13,9 @@ export default function Input({
   customClass
 }) {
   return (
-    <div className="my-5">
-      <label htmlFor={labelFor} className="sr-only">
-        {labelText}
+    <div className="my-3">
+      <label htmlFor={labelFor}>
+        {labelText}:
       </label>
 
       {/* For Input type like text, email, password  */}
@@ -45,7 +45,7 @@ export default function Input({
       />}
 
       {/* For Input type like select.  */}
-      {type == "select" && <select value={value} onChange={handleChange} className={fixedInputClass + customClass} id={id} name={name}>
+      {type == "select" && <select value={value} onChange={handleChange} className={ 'rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm' + customClass} id={id} name={name}>
         <option value="To Do">To Do</option>
         <option value="In Progress">In Progress</option>
         <option value="Done">Done</option>

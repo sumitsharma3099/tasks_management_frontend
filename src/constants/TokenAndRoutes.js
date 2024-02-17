@@ -1,4 +1,4 @@
-const base_url = `http://localhost:3001/`;
+const base_url = `https://tasks-management-backend.onrender.com/`;
 const authorized_url = base_url + `authorized`;
 const login_url = base_url + `login`;
 const new_task_url = base_url + `tasks`;
