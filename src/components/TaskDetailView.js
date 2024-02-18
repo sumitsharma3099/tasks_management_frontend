@@ -40,13 +40,24 @@ const TaskDetailView = () => {
                     Tasks Detail view
                 </h4>
                 <hr></hr>
-                <div className="max-w-md mx-auto mt-8 bg-white rounded-md overflow-hidden shadow-md">
-                    <div className="p-6">
-                        <h2 className="text-xl font-semibold mb-4">{record.title}</h2>
-                        <i className="text-gray-700 mb-2">{record.description}</i>
-                        <hr></hr>
-                        <p className="text-gray-600"><b>Status: </b>{record.status}</p>
+                <div className="bg-white p-4 rounded-md shadow-md mb-4">
+                    <h2 className="text-xl font-bold mb-2">{record.title}</h2>
+                    <p className="text-gray-600 mb-2">{record.description}</p>
+                    {record.status === 'Done' && <>
+                    <div className={"inline-block py-1 px-2 text-sm font-semibold rounded bg-green-500 text-white"}>
+                        {record.status}
                     </div>
+                    </>}
+                    {record.status === 'To Do' && <>
+                    <div className={"inline-block py-1 px-2 text-sm font-semibold rounded bg-red-500 text-white"}>
+                        {record.status}
+                    </div>
+                    </>}
+                    {record.status === 'In Progress' && <>
+                    <div className={"inline-block py-1 px-2 text-sm font-semibold rounded bg-yellow-500 text-white"}>
+                        {record.status}
+                    </div>
+                    </>}
                 </div>
                 <hr></hr>
                 <BackToTasksList />

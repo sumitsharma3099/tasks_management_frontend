@@ -11,6 +11,7 @@ import TaskDetailViewPage from './pages/TaskDetailView';
 import EditTaskPage from './pages/EditTask';
 import NewTaskPage from './pages/NewTask';
 import PageNotFound from './pages/PageNotFound';
+import EditUserPage from './pages/EditUser';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/task_detail_view" element={<TaskDetailViewPage/>} />
             <Route exact path="/edit_task" element={<EditTaskPage/>} />
             <Route exact path="/new_task" element={<NewTaskPage/>} />
+            <Route exact path="/edit_user" element={<EditUserPage/>} />
             <Route exact path="*" element={<PageNotFound/>} />
         </Routes>
       </HashRouter>

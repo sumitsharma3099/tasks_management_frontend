@@ -129,4 +129,27 @@ const newTaskFields = [
         placeholder: "Status"
     }
 ]
-export { loginFields, signupFields, editTaskFields, newTaskFields }
+
+const editUserFields = [
+    {
+        labelText: "Full Name",
+        labelFor: "full_name",
+        id: "full_name",
+        name: "full_name",
+        type: "text",
+        autoComplete: "fullname",
+        isRequired: true,
+        placeholder: "Full Name"
+    },
+    {
+        labelText: "Profile Pic Url",
+        labelFor: "profile_pic_url",
+        id: "profile_pic_url",
+        name: "profile_pic_url",
+        type: "text",
+        autoComplete: "profile_pic_url",
+        isRequired: false,
+        placeholder: "Profile Pic Url (Optional)"
+    }
+]
+export { loginFields, signupFields, editTaskFields, newTaskFields, editUserFields }

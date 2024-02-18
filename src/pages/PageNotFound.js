@@ -10,7 +10,7 @@ export default function PageNotFound() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                         </svg>
                     </div>
-                    <p className="mt-4 text-gray-600">Let's get you back <a href="/tasks_list" className="text-blue-500">Tasks List</a>.</p>
+                    <p className="mt-4 text-gray-600">Let's get you back <a href="/#/tasks_list" className="text-blue-500">Tasks List</a>.</p>
                 </div>
             </div>
         </div>
